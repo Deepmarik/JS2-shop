@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "sass": "npx node-sass --include-path node_modules --output-style compressed src/sass/style.sass > public/build/style.css",
+    "sass:watch": "npx node-sass --watch --include-path node_modules --output-style compressed src/sass/style.sass > public/build/style.css"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "webpack-dev-server": "^4.7.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.4.5"
   }
 }
